@@ -298,6 +298,10 @@ c3
 
 For the taxa identified, we combined their data (for all samples) with the cell line data and plot density plots of their reads per million microbiome reads.
 
+The raw cell lines microbiome data can be downloaded here: 
+
+https://www.dropbox.com/s/sgv3clvos281z9d/cell.lines.txt?dl=0
+
 ``` r
 library(scales)
 # cell.lines = readxl::read_xlsx('Table S3.xlsx')
