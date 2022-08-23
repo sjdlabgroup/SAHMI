@@ -3,8 +3,7 @@ SAHMI: Single-cell Analysis of Host-Microbiome Interactions
 Bassel Ghaddar
 7/31/2022
 
-.. image:: https://zenodo.org/badge/409289278.svg
-   :target: https://zenodo.org/badge/latestdoi/409289278
+[![DOI](https://zenodo.org/badge/409289278.svg)](https://zenodo.org/badge/latestdoi/409289278)
 
 ## Introduction
 
