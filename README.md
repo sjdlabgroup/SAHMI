@@ -3,6 +3,8 @@ SAHMI: Single-cell Analysis of Host-Microbiome Interactions
 Bassel Ghaddar
 7/31/2022
 
+[![DOI](https://zenodo.org/badge/409289278.svg)](https://zenodo.org/badge/latestdoi/409289278)
+
 ## Introduction
 
 SAHMI enables the systematic recovery and denoising of microbial signals from genomic sequencing of host tissues. The pipeline consists of R command line functions that implement the following main steps which are further described below.
