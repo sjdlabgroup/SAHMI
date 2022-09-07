@@ -5,12 +5,12 @@ Bassel Ghaddar
 
 ### Introduction
 
-We used SAHMI to analyze tumor-microbiome interactions in two pancreatic cancer cohorts: scPDA1 (Peng et al., 2019) and scPDA2 (Steele et al., 2020). We also compare metagnomic read capture in single-cell RNA-seq, whole genome-seq, 16S-rDNA-seq, and bulk RNA-seq.  
+We used SAHMI to analyze tumor-microbiome interactions in pancreatic cancer cohorts and report the processed metagenomic counts data for all datasets analyzed. 
 
 File descriptions: 
-- pdac_sahmi.RDS: SAHMI metagenomic read count reports for scPDA1 and scPDA2. 
-
 - rutgers_sahmi.RDS: SAHMI metagenomic read count reports for all in-house samples analyzed by 16S-rDNA-seq, single-cell RNA-seq, bulk RNA-seq, and whole genome-seq. Raw sequencing files can be found at phs003035.v1.p1. 
+
+- pdac_sahmi.RDS: SAHMI metagenomic read count reports for single-cell sequencing data from two cohorts (scPDA1 and scPDA2). 
 
 - peng_microbiome.RDS: processed single-barcode by taxa counts matrix for scPDA1. 
 
@@ -19,7 +19,6 @@ File descriptions:
 Please contact Bassel Ghaddar (bassel.ghaddar@gmail.com) or Subhajyoti De (subhajyoti.de@rutgers.edu) for any questions. 
 
 ### References
-Coming soon.
 
 Ghaddar, B., Blaser, M.J., and De, S. (2022). Denoising sparse microbial signals from single-cell sequencing of mammalian host tissues. BioRxiv. doi: 10.1101/2022.06.29.498176
 
