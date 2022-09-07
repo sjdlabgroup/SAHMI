@@ -5,7 +5,7 @@ Bassel Ghaddar
 
 ### Introduction
 
-We used SAHMI to analyze tumor-microbiome interactions in pancreatic cancer cohorts and report the processed metagenomic counts data for all datasets analyzed. 
+We used SAHMI to analyze tumor-microbiome interactions in pancreatic cancer cohorts and report the processed metagenomic counts data for all datasets analyzed in Ghaddar et al., 2022 in review. 
 
 File descriptions: 
 - rutgers_sahmi.RDS: SAHMI metagenomic read count reports for all in-house samples analyzed by 16S-rDNA-seq, single-cell RNA-seq, bulk RNA-seq, and whole genome-seq. Raw sequencing files can be found at phs003035.v1.p1. 
