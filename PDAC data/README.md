@@ -10,7 +10,7 @@ We used SAHMI to analyze tumor-microbiome interactions in pancreatic cancer coho
 File descriptions: 
 - rutgers_sahmi.RDS: SAHMI metagenomic read count reports for all in-house samples analyzed by 16S-rDNA-seq, single-cell RNA-seq, bulk RNA-seq, and whole genome-seq. Raw sequencing files can be found at phs003035.v1.p1. 
 
-- pdac_sahmi.RDS: SAHMI metagenomic read count reports for single-cell sequencing data from two cohorts (scPDA1 and scPDA2). 
+- pdac_sahmi.RDS: SAHMI metagenomic read count reports for single-cell sequencing data from two cohorts (scPDA1: peng et al., 2019 and scPDA2: steele et al., 2020). 
 
 - peng_microbiome.RDS: processed single-barcode by taxa counts matrix for scPDA1. 
 
