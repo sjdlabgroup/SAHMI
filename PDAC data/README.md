@@ -5,9 +5,16 @@ Bassel Ghaddar
 
 ### Introduction
 
-We used SAHMI to analyze tumor-microbiome interactions in two pancreatic cancer cohorts: scPDA1 (Peng et al., 2019) and scPDA2 (Steele et al., 2020). 
+We used SAHMI to analyze tumor-microbiome interactions in two pancreatic cancer cohorts: scPDA1 (Peng et al., 2019) and scPDA2 (Steele et al., 2020). We also compare metagnomic read capture in single-cell RNA-seq, whole genome-seq, 16S-rDNA-seq, and bulk RNA-seq.  
 
-The processed counts matrices for both datasets as well as SAHMI denoising test reports are included here. 
+File descriptions: 
+- pdac_sahmi.RDS: SAHMI analysis results for scPDA1 and scPDA2, including metagenomic read counts and k-mer correlation test and cell-line quantile test results. 
+
+- rutgers_sahmi.RDS: metagenomic read counts for all in-house samples analyzed by 16S-rDNA-seq, single-cell RNA-seq, bulk RNA-seq, and whole genome-seq. Raw sequencing files can be found at phs003035.v1.p1. 
+
+- peng_microbiome.RDS: processed single-barcode by taxa counts matrix for scPDA1. 
+
+- steele_microbiome.RDS: processed single-barcode by taxa counts matrix for scPDA2. 
 
 Please contact Bassel Ghaddar (bassel.ghaddar@gmail.com) or Subhajyoti De (subhajyoti.de@rutgers.edu) for any questions. 
 
