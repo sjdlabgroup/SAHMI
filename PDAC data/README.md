@@ -20,6 +20,8 @@ Please contact Bassel Ghaddar (bassel.ghaddar@gmail.com) or Subhajyoti De (subha
 
 ### References
 
+Ghaddar, B., Biswas, A., Harris, C. Omary, M.B., Carpizo, D.R., Blaser, M.J, De, S. (2022) Tumor microbiome links cellular programs and immunity in pancreatic cancer. in review. 
+
 Ghaddar, B., Blaser, M.J., and De, S. (2022). Denoising sparse microbial signals from single-cell sequencing of mammalian host tissues. BioRxiv. doi: 10.1101/2022.06.29.498176
 
 Peng, J., Sun, B.F., Chen, C.Y., Zhou, J.Y., Chen, Y.S., Chen, H., Liu, L., Huang, D., Jiang, J., Cui, G.S., et al. (2019). Single-cell RNA-seq highlights intra-tumoral heterogeneity and malignant progression in pancreatic ductal adenocarcinoma. Nat. Cell Res.
