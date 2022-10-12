@@ -1,12 +1,12 @@
 SAHMI Non-commercial Research License  
 
-© 2020 over which code developed Rutgers, The State University of New Jersey.  
+© 2020-2022 Rutgers, The State University of New Jersey.  
 
 The accompanying code and documentation is made available under the terms of this Rutgers’ Non-commercial Research License (this “RU-NCRL”). By downloading or by installing or by using the code, you are consenting to be bound by this RU-NCRL. If you do not agree to the terms and conditions of this license, do not download or install or use any of the code. 
 
 Use for noncommercial purposes in source and binary forms, with or without modification, are permitted provided that the following conditions are met:  
 
-1. The software is used solely for noncommercial purposes. It may not be used indirectly for commercial use, such as on a website that accepts advertising money for content. Noncommercial use does include use by a for-profit company in its research-only. For commercial use rights, contact Rutgers, The State University of New Jersey, at innovate@research.rutgers.edu and inquire about the SAHMI project.  
+1. The software is used solely for noncommercial purposes. It may not be used indirectly for commercial use, such as on a website that accepts advertising money for content. Noncommercial use does include use by a for-profit company in its research-only. For commercial use rights, contact Rutgers, The State University of New Jersey, at innovate@research.rutgers.edu and inquire about the SAHMI project associated with Rutgers Docket #2021-055.  
 
 2. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.  
 
