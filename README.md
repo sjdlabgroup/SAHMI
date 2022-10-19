@@ -391,4 +391,8 @@ SAHMI produces a final barcode by metagenomic counts matrix which can be jointly
 
 Please see the following publications for more details:
 
-Coming soon.
+Ghaddar, B., Blaser, M.J., and De, S. (2022a). Denoising sparse microbial signals from single-cell sequencing of mammalian host tissues. BioRxiv. DOI: https://doi.org/10.1101/2022.06.29.498176
+
+Ghaddar, B., Biswas, A., Harris, C., Omary, M.B., Carpizo, D.R., Blaser, M.J., and De, S. (2022b). Tumor microbiome links cellular programs and immunity in pancreatic cancer. Cancer Cell 40, 1240-1253.e5.
+![image](https://user-images.githubusercontent.com/47805403/196802757-88e8e685-7f53-4875-8818-e19ec63451e4.png)
+
