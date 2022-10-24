@@ -8,7 +8,7 @@ read_kraken_reports = function(files, sample_names = NULL, study_name = NULL, mi
   
   df = list()
   n = 0
-  for(i in 1:length(f)){
+  for(i in 1:length(files)){
     if(round(i/length(files)*100, 2) > n){n = round(i/length(files)*100, 2); cat(paste0('\r',n,'% done   '))}
     x = read.delim(files[i], header = F)
     x$V8 = trimws(x$V8)
