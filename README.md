@@ -3,8 +3,6 @@ SAHMI: Single-cell Analysis of Host-Microbiome Interactions
 Bassel Ghaddar
 7/31/2022
 
-[![DOI](https://zenodo.org/badge/409289278.svg)](https://zenodo.org/badge/latestdoi/409289278)
-
 ## Introduction
 
 SAHMI enables the systematic recovery and denoising of microbial signals from genomic sequencing of host tissues. The pipeline consists of R command line functions that implement the following main steps which are further described below.
@@ -52,6 +50,8 @@ The script `run_kraken.r` is included for convenience of running Kraken2Uniq and
 -   `--ncbi_blast_path` path to ncbi-blast (see Kraken documentation for details)
 -   `--Kraken2Uniq_path` path to Kraken2 main 'kraken2' function
 -   `--kraken_database_path` path to kraken database
+-   `--kreport2mpa_path` path to kreport2mpa.py function (included in SAHMI/functions)
+
 
 The output includes fastq files with Kraken NCBI taxonomic assignments for each read, an output file containing k-mer level taxonomic data, and Kraken standard, uniq, and MPA style reports.
 
@@ -391,6 +391,4 @@ SAHMI produces a final barcode by metagenomic counts matrix which can be jointly
 
 Please see the following publications for more details:
 
-Ghaddar, B., Blaser, M.J., and De, S. (2022a). Denoising sparse microbial signals from single-cell sequencing of mammalian host tissues. BioRxiv. DOI: https://doi.org/10.1101/2022.06.29.498176
-
-Ghaddar, B., Biswas, A., Harris, C., Omary, M.B., Carpizo, D.R., Blaser, M.J., and De, S. (2022b). Tumor microbiome links cellular programs and immunity in pancreatic cancer. Cancer Cell 40, 1240-1253.e5.
+Coming soon.

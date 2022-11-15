@@ -54,6 +54,8 @@ The script ```run_kraken.r``` is included for convenience of running Kraken2Uniq
 * ```--ncbi_blast_path``` path to ncbi-blast (see Kraken documentation for details)
 * ```--Kraken2Uniq_path``` path to Kraken2 main 'kraken2' function
 * ```--kraken_database_path``` path to kraken database
+* ```--kreport2mpa_path``` path to kreport2mpa.py function (included in SAHMI/functions)
+
 
 The output includes fastq files with Kraken NCBI taxonomic assignments for each read, an output file containing k-mer level taxonomic data, and Kraken standard, uniq, and MPA style reports. 
 
@@ -223,6 +225,10 @@ c3
 ```
 
 For the taxa identified, we combined their data (for all samples) with the cell line data and plot density plots of their reads per million microbiome reads. 
+
+The raw cell lines microbiome data can be downloaded here: 
+
+https://www.dropbox.com/s/sgv3clvos281z9d/cell.lines.txt?dl=0
 
 ```{r fig.height = 2.5, fig.width = 7, fig.align = "center"}
 
