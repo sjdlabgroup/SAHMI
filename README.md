@@ -51,6 +51,7 @@ The script `run_kraken.r` is included for convenience of running Kraken2Uniq and
 -   `--Kraken2Uniq_path` path to Kraken2 main 'kraken2' function
 -   `--kraken_database_path` path to kraken database
 -   `--kreport2mpa_path` path to kreport2mpa.py function (included in SAHMI/functions)
+-   `--paired` are fastq files paired end (T) or single-end/unpaired (F). Default is T. 
 
 
 The output includes fastq files with Kraken NCBI taxonomic assignments for each read, an output file containing k-mer level taxonomic data, and Kraken standard, uniq, and MPA style reports.
@@ -79,7 +80,7 @@ The outputs are fasta files for microbiome reads and a microbiome output file.
 
 ## 3. Single-cell k-mer analysis
 
-The next step is tabulating k-mer statistics across individual barcodes using the script `sckmer.r`. This function counts the number of k-mers and unique k-mers assigned to a taxon across barcodes. The cell barcode and unique molecular identifier (UMI) are used to identify unique barcodes and reads. Data is reported for taxa of pre-specified ranks (default genus + species) taking into account all subsequently higher resolution ranks. Reads with any k-mers mapped to the host (e.g. human) are discarded. Reads with &gt;50% of the k-mers map outside the taxon's lineage are also discarded. The output is a table of barcodes, taxonomic IDs, number of k-mers, and number of unique k-mers.
+The next step is tabulating k-mer statistics across individual barcodes using the script `sckmer.r` for paired end data and `sckmer_unpaired.r` for unpaired/single-end sequence data. These functions count the number of k-mers and unique k-mers assigned to a taxon across barcodes. The cell barcode and unique molecular identifier (UMI) are used to identify unique barcodes and reads. Data is reported for taxa of pre-specified ranks (default genus + species) taking into account all subsequently higher resolution ranks. Reads with any k-mers mapped to the host (e.g. human) are discarded. Reads with &gt;50% of the k-mers map outside the taxon's lineage are also discarded. The output is a table of barcodes, taxonomic IDs, number of k-mers, and number of unique k-mers.
 
 `sckmer.r`
 
@@ -96,6 +97,8 @@ The next step is tabulating k-mer statistics across individual barcodes using th
 -   `host` host taxonomy ID to exclude
 -   `min_frac` minimum fraction of k-mers directly assigned to taxon ID or its lineage to use read.
 -   `nsample` max number of barcodes to sample per taxon ID
+
+Note that parameters for `sckmer_unpared.r` are the same but do not include `fa2`. 
 
 ## 4. Barcode level signal denoising (barcode k-mer correlation test)
 
