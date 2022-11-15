@@ -12,6 +12,7 @@ option_list = list(
   make_option(c("--paired"), action="store", default=T, help = "paired-end fastq files (T) or sinle-end (F)")
 )
 opt = parse_args(OptionParser(option_list = option_list))
+opt$paired = as.logical(opt$paired)
 
 library(stringr)
 
