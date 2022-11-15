@@ -8,7 +8,7 @@ option_list = list(
   make_option(c("--ncbi_blast_path"), action="store", help = "path to ncbi-blast"),
   make_option(c("--Kraken2Uniq_path"), action="store", help = "path to Kraken2 main 'kraken2' function"),
   make_option(c("--kraken_database_path"), action="store", help = "path to kraken database"),
-  make_option(c("--kreport2mpa"), action="store", help = "path to kreport2mpa.py' function")
+  make_option(c("--kreport2mpa_path"), action="store", help = "path to kreport2mpa.py' function")
 )
 opt = parse_args(OptionParser(option_list = option_list))
 
