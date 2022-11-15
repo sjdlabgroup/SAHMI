@@ -26,8 +26,8 @@ str = paste0(str,
              '--classified-out ', paste0(opt$out_path, opt$sample), '#.fq', ' \\\n',
              '--output ', paste0(opt$out_path, opt$sample, '.kraken.output.txt'), ' \\\n',
              '--report ', paste0(opt$out_path, opt$sample, '.kraken.report.txt'), ' \\\n',
-             paste0(f1[i], ' \\\n'),
-             paste0(f2[i], '\n\n')
+             paste0(fq1[i], ' \\\n'),
+             paste0(fq2[i], '\n\n')
 )
 
 
