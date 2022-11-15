@@ -7,7 +7,8 @@ option_list = list(
   make_option(c("--out_path"), action="store", help = "output directory path"),
   make_option(c("--ncbi_blast_path"), action="store", help = "path to ncbi-blast"),
   make_option(c("--Kraken2Uniq_path"), action="store", help = "path to Kraken2 main 'kraken2' function"),
-  make_option(c("--kraken_database_path"), action="store", help = "path to kraken database")
+  make_option(c("--kraken_database_path"), action="store", help = "path to kraken database"),
+  make_option(c("--kreport2mpa"), action="store", help = "path to kreport2mpa.py' function")
 )
 opt = parse_args(OptionParser(option_list = option_list))
 
@@ -37,7 +38,7 @@ str = paste0(str,
              ' > ',
              paste0(opt$out_path, opt$sample, '.kraken.report.std.txt'),
              '\n\n',
-             '/projects/sd948/bassel/Kraken2Uniq/kraken2-master/kreport2mpa.py \\\n',
+             opt$kreport2mpa, ' \\\n',
              '-r ', paste0(opt$out_path, opt$sample, '.kraken.report.std.txt'), ' \\\n',
              '-o ', paste0(opt$out_path, opt$sample, '.kraken.report.mpa.txt'), ' \\\n',
              '--intermediate-ranks',
