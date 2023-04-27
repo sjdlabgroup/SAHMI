@@ -6,7 +6,7 @@ output: github_document
 ---
 
 ```{r setup, include=FALSE, warning=F, message = F}
-knitr::opts_chunk$set(echo = T, message = F, warning = F)
+knitr::opts_chunk$set(echo = T, eval = F, message = F, warning = F)
 ```
 
 ## Introduction
@@ -213,7 +213,7 @@ These results show a wide range of values for the three correlations, with only 
 
 The previous steps enrich for true taxa that produced diverse RNA. The next step in SAHMI is to identify contaminant taxa and spurious false positive assignments. These can be identified based on the widely observed pattern that contaminants appear at higher frequencies in low concentration or negative control samples. In the absence of experimentally matched negative controls, SAHMI provides a negative control resource comprised of microbiome profiles from 2,491 sterile cell experiments from around the world. For each taxon in a test sample, SAHMI compares the fraction of microbiome reads assigned to the taxon [i.e. taxon counts/sum(all bacterial, fungal, viral counts), in reads per million] to the microbiome fraction assigned to the taxon in all cell line experiments. Using the microbiome fraction comparison normalizes for experiments having a varying number of total sequencing reads or varying underlying contamination. SAHMI tests whether the taxon microbial fraction in the test sample is > 99th percentile (by default) of the taxon’s microbiome fraction distribution in cell line data using a one-sample quantile test. Taxa whose counts fall within the cell line distribution are identified as below the cell-line noise threshold. Users may choose how stringently to select the quantile threshold for significance testing.
 
-```Table S3.xlsx``` contains the reads per million microbiome reads (rpmm) percentile data for taxa detected in cell lines. These can be directly to the rpmm in the test samples. Users may also wish to work with the raw cell lines genus and species resolution microbiome data contained in ```cell.lines.txt``` to get a better feel for taxa distributions or to include or exclude zero counts in quantile calculations.  
+```Table S4.xlsx``` contains the reads per million microbiome reads (rpmm) percentile data for taxa detected in cell lines. Each row corresponds to a taxon which is identified by name, rank (rank, G = genus, S = species), and NCBI taxonony id (taxid). The columns with numeric names (0.01-1) correspond to rpmm percentile values in the cell lines dataset. For example, the column "0.01" contains the rpmm first percentile value for each taxon, "0.5" contains the 50th percentile data, etc. These rpmm percentile values can be directly compared to the rpmm values in the test samples. Users may also wish to work with the raw cell lines genus and species resolution data contained in ```cell.lines.txt``` (Dropbox link below) to get a better feel for taxa distributions or to include or exclude zero counts in quantile calculations. Percentile values in ```Table S4.xlsx``` are calculated only from samples in which a taxon was reported with >2 reads and >2 unique k-mers. Users may wish to include all reported samples or zero-count samples. 
 
 To denoise and decontaminate the gastric metaplasia samples from above (SRR9713132) we combined data from the barcode and sample k-mer correlation tests and keep taxa that pass all tests. We then compare the remaining taxa counts to their distribution in the cell line data. The same sample-level data would be used for other samples in the study, but each sample would have its own sckmer results. 
 
@@ -230,12 +230,13 @@ For the taxa identified, we combined their data (for all samples) with the cell 
 
 The raw cell lines microbiome data can be downloaded here: 
 
-https://www.dropbox.com/s/sgv3clvos281z9d/cell.lines.txt?dl=0
+https://www.dropbox.com/s/r6xvw1589lqyqts/cell.lines.txt?dl=0
+
 
 ```{r fig.height = 2.5, fig.width = 7, fig.align = "center"}
 
 library(scales)
-# cell.lines = readxl::read_xlsx('Table S3.xlsx')
+# cell.lines = readxl::read_xlsx('Table S4.xlsx')
 cell.lines = read.delim('/Users/bassel/Downloads/cell.lines.txt', header = T) %>% tibble()
 
 df = cell.lines[,1:11] %>% mutate(study = 'cell lines'); df = df[, -2]
@@ -270,11 +271,11 @@ ggplot(subset(df, name %in% c3$name), aes(rpmm, fill = study, ..scaled..)) +
 
 ```
 
-These density plots show that the only taxon detected at counts per million greater than found in the cell line data is Helicobacter pylori, and only in some samples (middle and right peaks). Quantitative results are obtaind by direclty comparing test sample rpmm to taxa quantile data from ```Table S3``` or ```cell.lines.txt```. Here we merge results from kraken report, k-mer correlation tests, and cell line quantile test for sample SRR9713132.
+These density plots show that the only taxon detected at counts per million greater than found in the cell line data is Helicobacter pylori, and only in some samples (middle and right peaks). Quantitative results are obtaind by direclty comparing test sample rpmm to taxa quantile data from ```Table S4``` or ```cell.lines.txt```. Here we merge results from kraken report, k-mer correlation tests, and cell line quantile test for sample SRR9713132.
 
 ```{r}
 
-# get quantiles from cell line data (or alternatively use Table S3)
+# get quantiles from cell line data (or alternatively use Table S4)
 qtile = 0.99
 q_df = cell.lines %>%
   group_by(name, rank) %>% 
