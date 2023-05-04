@@ -217,7 +217,7 @@ To denoise and decontaminate the gastric metaplasia samples from above (SRR97131
 # combine k-mer correlation tests, filter for significant values and species resolution
 c3 = left_join(c, c2, by = 'name') %>% 
   left_join(select(kr, rank, name) %>% distinct()) %>% 
-  subset(p<0.05 & p1<0.05 & p2<0.05 & p3<0.05 & rank == 'S')
+  subset(r1>0 & r2>0 & r3>0 & p<0.05 & p1<0.05 & p2<0.05 & p3<0.05 & rank == 'S')
 
 c3
 ```
