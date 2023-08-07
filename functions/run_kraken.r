@@ -18,8 +18,7 @@ library(stringr)
 
 if(opt$paired == T){
   # run Kraken paired end
-  str = paste0(str,
-               'export PATH=$PATH:', opt$ncbi_blast_path, ' \n\n',
+  str = paste0('export PATH=$PATH:', opt$ncbi_blast_path, ' \n\n',
                opt$Kraken2Uniq_path, ' \\\n',
                '--db ', opt$kraken_database_path, ' \\\n',
                '--threads 24 \\\n',
