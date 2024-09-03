@@ -304,4 +304,4 @@ SAHMI produces a final barcode by metagenomic counts matrix which can be jointly
 
 Please see the following publications for more details:
 
-Coming soon.
+https://www.nature.com/articles/s43588-023-00507-1
